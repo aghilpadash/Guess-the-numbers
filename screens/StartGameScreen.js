@@ -4,6 +4,8 @@ import Card from "../components/Card";
 import Colors from "../constant/colors";
 import Input from "../components/Input";
 import NumberContainer from "../components/NumberContainer";
+import BodyText from "../components/BodyText";
+import TitleText from "../components/TitleText";
 
 const StartGameScreen = props => {
 
@@ -36,7 +38,7 @@ const StartGameScreen = props => {
     if (confirmed) {
         confirmedOutput =
             <Card style={styles.summaryContainer}>
-                <Text >عدد انتخابی :</Text>
+                <BodyText >عدد انتخابی :</BodyText>
                 <NumberContainer>{selectedNumber}</NumberContainer>
                 <Button title="بزن بریم" onPress={() => props.onStartGame(selectedNumber)} />
             </Card>
@@ -47,11 +49,11 @@ const StartGameScreen = props => {
             Keyboard.dismiss();
         }}>
             <View style={styles.screen}>
-                <Text style={styles.title}>شروع بازی معدد</Text>
+                <TitleText style={styles.title}>شروع بازی معدد</TitleText>
                 <Card style={styles.inputContainer}>
-                    <Text>
+                    <BodyText>
                         یک عدد انتخاب کن
-                    </Text>
+                    </BodyText>
                     <Input
                         style={styles.input}
                         blurOnSubmit={true}
