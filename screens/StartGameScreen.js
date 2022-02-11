@@ -36,7 +36,7 @@ const StartGameScreen = props => {
     if (confirmed) {
         confirmedOutput =
             <Card style={styles.summaryContainer}>
-                <Text>عدد انتخابی :</Text>
+                <Text >عدد انتخابی :</Text>
                 <NumberContainer>{selectedNumber}</NumberContainer>
                 <Button title="بزن بریم" onPress={() => props.onStartGame(selectedNumber)} />
             </Card>
@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         marginVertical: 10,
+        fontFamily: 'vazir-bold'
     },
     inputContainer: {
         width: 300,
